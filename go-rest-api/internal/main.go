@@ -54,10 +54,10 @@ func GetGopherByName(gopher operations.GetGopherNameParams) middleware.Responder
 
 	var URL string
 	if gopher.Name != "" {
-		URL = "https://github.com/1055373165/raw/main" + gopher.Name + ".png"
+		URL = "https://github.com/1055373165/learn-go-by-example/blob/main/go-rest-api/" + gopher.Name + ".png"
 	} else {
 		// by default we return dr who  gopher
-		URL = "https://github.com/1055373165/raw/main/dr-who.png"
+		URL = "https://github.com/1055373165/learn-go-by-example/blob/main/go-rest-api/br.png"
 	}
 
 	respnonse, err := http.Get(URL)
