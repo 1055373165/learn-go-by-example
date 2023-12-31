@@ -1,0 +1,22 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the app
+    cmds:
+      - go build -o bin/gopher-grpc main.go
+  
+  run:
+    desc: Run the app
+    cmds:
+      - go run main.go
+
+  generate:
+    desc: Generate Go from the proto file
+    cmds: 
+    - protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative pkg/gopher/gopher.proto
+
+  test:
+    desc: Execute Unit Tests
+    cmds: 
+    - go test -timeout 30s -run ^TestGetGopher$ github.com/1055373165/learn-go-by-example/go-gopher-grpc/cmd -v

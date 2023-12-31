@@ -1,0 +1,20 @@
+syntax = "proto3";
+package gopher;
+
+option go_package = "github.com/1055373165/learn-go-by-examples/go-gopher-grpc";
+
+// The Gopher Service Definition
+service Gopher {
+    // Get Gopher Url
+    rpc GetGopher (GopherRequest) returns (GopherReply) {}
+}
+
+// The Request message containing the user's name.
+message GopherRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message GopherReply {
+    string message = 1;
+}
