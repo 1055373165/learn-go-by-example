@@ -1,4 +1,4 @@
-module github.com/1055373165/learn-go-by-example
+module github.com/1055373165/learn-go-by-example/go-gopher-grpc
 
 go 1.21.3
 

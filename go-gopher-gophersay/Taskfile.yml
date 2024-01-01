@@ -1,0 +1,22 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the app
+    cmds:
+    - go build -o bin/gophersay main.go
+
+  run: 
+    desc: Run the app
+    cmds:
+    - go run main.go  
+
+  clear:
+    desc: Clear the app
+    cmds:
+    - rm -rf dist
+
+  test:
+    desc: Test the app
+    cmds:
+    - go run main.go Hello Test!
