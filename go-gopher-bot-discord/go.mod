@@ -1,4 +1,4 @@
-module github.com/1055373165/learning-go-by-examples/go-gopher-bot-discord
+module github.com/1055373165/learn-go-by-example
 
 go 1.21.3
 
